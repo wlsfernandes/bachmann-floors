@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Page;
+use Illuminate\Contracts\Support\Renderable;
 
 class HomeController extends Controller
 {
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return Renderable
      */
     public function index()
     {
@@ -20,6 +21,9 @@ class HomeController extends Controller
                 'sections' => fn ($q) => $q->published(),
             ])
             ->firstOrFail();
+        if (! $page) {
+            return 'Homepage not configured. Run db:seed.';
+        }
 
         return view('frontend.pages.show', compact('page'));
     }
