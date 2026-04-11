@@ -318,4 +318,4 @@ Route::middleware('auth')->group(function () {
 |
 */
 
-Route::get('{slug}', [PagePublicController::class, 'show'])->where('slug', '^(?!$).+');
+Route::fallback([PagePublicController::class, 'show'])->name('public.page.show');
