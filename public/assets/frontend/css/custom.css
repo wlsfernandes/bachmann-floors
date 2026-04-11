@@ -1,0 +1,130 @@
+/* ===============================
+Header tools (flags + admin icon)
+================================= */
+
+.header-tools {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-tools li {
+    list-style: none;
+}
+
+.header-tools a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-tools img {
+    height: 18px;
+    width: auto;
+    border-radius: 2px;
+    transition: transform 0.2s ease;
+}
+
+.header-tools i {
+    font-size: 20px;
+    color: #fff;
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+/* Hover effects */
+
+.header-tools a:hover img {
+    transform: scale(1.1);
+}
+
+.header-tools a:hover i {
+    color: #f08a41;
+    transform: rotate(15deg);
+}
+/* VIDEO SECTION */
+.video__section {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Image */
+.video__thumb img {
+    transition: 0.4s ease;
+}
+
+/* Hover zoom */
+.video__section:hover img {
+    transform: scale(1.05);
+}
+
+/* Play button */
+.video__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    font-size: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.video__section:hover .video__play {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Modal styling */
+.video-modal {
+    background: #000;
+    border: none;
+}
+
+/* Close button */
+.video-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    background: #ff3b3b;
+    border: none;
+    border-radius: 50%;
+
+    color: #fff;
+    font-size: 20px;
+    z-index: 10;
+}
+
+/* Force square images */
+.project-square-img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 🔥 perfect square */
+    overflow: hidden;
+}
+
+.project-square-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* no stretching */
+    object-position: top;
+}

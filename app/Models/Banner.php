@@ -1,0 +1,74 @@
+<?php
+
+namespace App\Models;
+
+use App\Traits\Auditable;
+use Illuminate\Database\Eloquent\Model;
+
+class Banner extends Model
+{
+    use Auditable;
+
+    protected $fillable = [
+        'page_id',
+        'title_en',
+        'title_es',
+        'subtitle_en',
+        'subtitle_es',
+        'image_url',
+        'link',
+        'open_in_new_tab',
+        'is_published',
+        'publish_start_at',
+        'publish_end_at',
+        'is_published',
+        'sort_order',
+    ];
+
+    protected $casts = [
+        'is_published' => 'boolean',
+        'open_in_new_tab' => 'boolean',
+        'publish_start_at' => 'date',
+        'publish_end_at' => 'date',
+    ];
+
+    public function page()
+    {
+        return $this->belongsTo(Page::class);
+    }
+
+    public function getSubtitleAttribute()
+    {
+        $locale = app()->getLocale();
+
+        return $this->{"subtitle_$locale"}
+            ?? $this->subtitle_en
+            ?? '';
+    }
+
+    public function getTitleAttribute()
+    {
+        $locale = app()->getLocale();
+
+        return $this->{"title_$locale"}
+            ?? $this->title_en
+            ?? '';
+    }
+
+    public function scopePublished($query)
+    {
+        return $query->where('is_published', true)
+            ->where(function ($q) {
+                $now = now();
+
+                $q->whereNull('publish_start_at')
+                    ->orWhere('publish_start_at', '<=', $now);
+            })
+            ->where(function ($q) {
+                $now = now();
+
+                $q->whereNull('publish_end_at')
+                    ->orWhere('publish_end_at', '>=', $now);
+            });
+    }
+}
