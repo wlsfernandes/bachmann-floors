@@ -29,7 +29,7 @@
                         {{-- TITLE --}}
                         @if (!empty($footer))
                             <div class="cms-html">
-                                {!! $footer->{'title_' . app()->getLocale()} ?? $footer->title_en !!}
+                                {!! $footer->title !!}
                             </div>
                         @endif
 
@@ -68,7 +68,7 @@
                         </div>
 
                         <ul class="list">
-                            @foreach ($footerMenu ?? [] as $item)
+                            @foreach ($menu ?? [] as $item)
                                 @if (!empty($item->link))
                                     <li>
                                         <a href="{{ $item->link }}">
