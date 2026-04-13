@@ -14,6 +14,9 @@ class Footer extends Model
         'subtitle_en',
         'subtitle_es',
         'image_url',
+        'phone',
+        'email',
+        'address',
     ];
 
 

@@ -2,7 +2,7 @@
 
 @section('title', 'Site Settings')
 @section('css')
-  <link href="{{ asset('/assets/admin/libs/datatables/datatables.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/assets/admin/libs/datatables/datatables.min.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 @section('content')
     <div class="card border border-primary">
@@ -46,7 +46,7 @@
                                 <i class="uil-image"></i> Upload Logo
                             </a>
 
-                            @if($setting->image_url)
+                            @if ($setting->image_url)
                                 <a href="{{ route('admin.images.preview', ['model' => 'settings', 'id' => $setting->id]) }}"
                                     target="_blank">
                                     <i class="fas fa-eye text-primary"></i>
@@ -76,43 +76,6 @@
                 <hr>
 
                 {{-- =======================
-                Contact Information
-                ======================== --}}
-                <h6 class="text-primary mb-3">Contact Information</h6>
-
-                <div class="mb-3">
-                    <input type="email" name="contact_email" class="form-control" placeholder="Contact email"
-                        value="{{ old('contact_email', $setting->contact_email) }}">
-                </div>
-
-                <div class="mb-3">
-                    <input type="text" name="contact_phone" class="form-control" placeholder="Contact phone"
-                        value="{{ old('contact_phone', $setting->contact_phone) }}">
-                </div>
-
-                <div class="mb-3">
-                    <textarea name="address" class="form-control" rows="2"
-                        placeholder="Address">{{ old('address', $setting->address) }}</textarea>
-                </div>
-
-                <hr>
-
-                {{-- =======================
-                Footer
-                ======================== --}}
-                <h6 class="text-primary mb-3">Footer</h6>
-
-                <div class="mb-3">
-                    <textarea name="footer_text" class="form-control" rows="2"
-                        placeholder="Footer text">{{ old('footer_text', $setting->footer_text) }}</textarea>
-                    <small class="text-muted">
-                        Appears at the bottom of every page.
-                    </small>
-                </div>
-
-                <hr>
-
-                {{-- =======================
                 Default SEO
                 ======================== --}}
                 <h6 class="text-primary mb-3">Default SEO</h6>
@@ -123,8 +86,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <textarea name="default_seo_description" class="form-control" rows="3"
-                        placeholder="Default SEO description">{{ old('default_seo_description', $setting->default_seo_description) }}</textarea>
+                    <textarea name="default_seo_description" class="form-control" rows="3" placeholder="Default SEO description">{{ old('default_seo_description', $setting->default_seo_description) }}</textarea>
                 </div>
 
                 <hr>

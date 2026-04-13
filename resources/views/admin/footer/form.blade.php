@@ -39,53 +39,76 @@
                                 </div>
 
                             </div>
+                            <div class="row g-4">
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Phone</label>
+                                    <input type="text" name="phone" class="form-control"
+                                        value="{{ old('phone', $footer->phone ?? '') }}">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" name="email" class="form-control"
+                                        value="{{ old('email', $footer->email ?? '') }}">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Address</label>
+                                    <input type="text" name="address" class="form-control"
+                                        value="{{ old('address', $footer->address ?? '') }}">
+                                </div>
 
 
-                            {{-- SUBTITLE EN --}}
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Subtitle (English)</label>
-                                <textarea name="subtitle_en" class="form-control ckeditor" rows="3">{{ old('subtitle_en', $footer->subtitle_en ?? '') }}</textarea>
-                            </div>
-
-                            {{-- SUBTITLE ES --}}
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Subtitle (Spanish)</label>
-                                <textarea name="subtitle_es" class="form-control ckeditor" rows="3">{{ old('subtitle_es', $footer->subtitle_es ?? '') }}</textarea>
-                            </div>
-
-                            {{-- IMAGE --}}
-                            <div class="col-md-12 mb-4">
-                                <label class="form-label">Footer Image</label>
-
-                                <input type="file" name="image_url" class="form-control">
-
-                                {{-- Preview --}}
-                                @if (isset($footer) && $footer->image_url)
-                                    <div class="mb-4 text-center">
-                                        <div class="mb-2 fw-semibold">Current image</div>
-                                        <img src="{{ route('admin.images.preview', ['model' => 'footer', 'id' => $footer->id]) }}"
-                                            class="img-thumbnail mb-3" style="max-height: 220px;" alt="Current image">
-                                    </div>
-                                @endif
                             </div>
 
                         </div>
 
-                        {{-- ACTIONS --}}
-                        <div class="d-flex justify-content-end">
-
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-save"></i>
-                                {{ isset($footer) ? 'Update Footer' : 'Save Footer' }}
-                            </button>
-
+                        {{-- SUBTITLE EN --}}
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Subtitle (English)</label>
+                            <textarea name="subtitle_en" class="form-control ckeditor" rows="3">{{ old('subtitle_en', $footer->subtitle_en ?? '') }}</textarea>
                         </div>
 
-                    </form>
+                        {{-- SUBTITLE ES --}}
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Subtitle (Spanish)</label>
+                            <textarea name="subtitle_es" class="form-control ckeditor" rows="3">{{ old('subtitle_es', $footer->subtitle_es ?? '') }}</textarea>
+                        </div>
+
+                        {{-- IMAGE --}}
+                        <div class="col-md-12 mb-4">
+                            <label class="form-label">Footer Image</label>
+
+                            <input type="file" name="image_url" class="form-control">
+
+                            {{-- Preview --}}
+                            @if (isset($footer) && $footer->image_url)
+                                <div class="mb-4 text-center">
+                                    <div class="mb-2 fw-semibold">Current image</div>
+                                    <img src="{{ route('admin.images.preview', ['model' => 'footer', 'id' => $footer->id]) }}"
+                                        class="img-thumbnail mb-3" style="max-height: 220px;" alt="Current image">
+                                </div>
+                            @endif
+                        </div>
 
                 </div>
-            </div>
 
+                {{-- ACTIONS --}}
+                <div class="d-flex justify-content-end">
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i>
+                        {{ isset($footer) ? 'Update Footer' : 'Save Footer' }}
+                    </button>
+
+                </div>
+
+                </form>
+
+            </div>
         </div>
+
+    </div>
     </div>
 @endsection
