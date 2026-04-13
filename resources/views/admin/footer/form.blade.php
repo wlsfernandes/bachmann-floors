@@ -39,43 +39,44 @@
                                 </div>
 
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="row g-4">
 
                                 <div class="col-md-4">
                                     <label class="form-label">Phone</label>
-                                    <input type="text" name="phone" class="form-control"
+                                    <input type="text" name="phone" class="form-control ckeditor-title" rows="3"
                                         value="{{ old('phone', $footer->phone ?? '') }}">
                                 </div>
 
                                 <div class="col-md-4">
                                     <label class="form-label">Email</label>
-                                    <input type="email" name="email" class="form-control"
+                                    <input type="email" name="email" class="form-control ckeditor-title" rows="3"
                                         value="{{ old('email', $footer->email ?? '') }}">
                                 </div>
 
                                 <div class="col-md-4">
                                     <label class="form-label">Address</label>
-                                    <input type="text" name="address" class="form-control"
+                                    <input type="text" name="address" class="form-control ckeditor-title" rows="3"
                                         value="{{ old('address', $footer->address ?? '') }}">
                                 </div>
 
 
                             </div>
-
                         </div>
+                        <div class="row">
+                            {{-- SUBTITLE EN --}}
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Subtitle (English)</label>
+                                <textarea name="subtitle_en" class="form-control ckeditor" rows="3">{{ old('subtitle_en', $footer->subtitle_en ?? '') }}</textarea>
+                            </div>
 
-                        {{-- SUBTITLE EN --}}
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Subtitle (English)</label>
-                            <textarea name="subtitle_en" class="form-control ckeditor" rows="3">{{ old('subtitle_en', $footer->subtitle_en ?? '') }}</textarea>
+                            {{-- SUBTITLE ES --}}
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Subtitle (Spanish)</label>
+                                <textarea name="subtitle_es" class="form-control ckeditor" rows="3">{{ old('subtitle_es', $footer->subtitle_es ?? '') }}</textarea>
+                            </div>
                         </div>
-
-                        {{-- SUBTITLE ES --}}
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Subtitle (Spanish)</label>
-                            <textarea name="subtitle_es" class="form-control ckeditor" rows="3">{{ old('subtitle_es', $footer->subtitle_es ?? '') }}</textarea>
-                        </div>
-
                         {{-- IMAGE --}}
                         <div class="col-md-12 mb-4">
                             <label class="form-label">Footer Image</label>
