@@ -91,21 +91,21 @@
                         <div class="single-contact-info mb-2">
                             <div class="cms-html">
                                 <strong>@lang('home.contact_phone'):</strong><br>
-                                {{ $footer->contact_phone ?? '' }}
+                                {!! $footer->phone ?? '' !!}
                             </div>
                         </div>
 
                         <div class="single-contact-info mb-2">
                             <div class="cms-html">
                                 <strong>@lang('home.contact_email'):</strong><br>
-                                {{ $footer->contact_email ?? '' }}
+                                {!! $footer->email ?? '' !!}
                             </div>
                         </div>
 
                         <div class="single-contact-info">
                             <div class="cms-html">
                                 <strong>@lang('home.contact_directions'):</strong><br>
-                                {{ $footer->address ?? '' }}
+                                {!! $footer->address ?? '' !!}
                             </div>
                         </div>
 
