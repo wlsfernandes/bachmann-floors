@@ -45,19 +45,19 @@
 
                                 <div class="col-md-4">
                                     <label class="form-label">Phone</label>
-                                    <input type="text" name="phone" class="form-control ckeditor-title" rows="3"
+                                    <input type="text" name="phone" class="form-control ckeditor-title" rows="1"
                                         value="{{ old('phone', $footer->phone ?? '') }}">
                                 </div>
 
                                 <div class="col-md-4">
                                     <label class="form-label">Email</label>
-                                    <input type="email" name="email" class="form-control ckeditor-title" rows="3"
+                                    <input type="email" name="email" class="form-control ckeditor-title" rows="1"
                                         value="{{ old('email', $footer->email ?? '') }}">
                                 </div>
 
                                 <div class="col-md-4">
                                     <label class="form-label">Address</label>
-                                    <input type="text" name="address" class="form-control ckeditor-title" rows="3"
+                                    <input type="text" name="address" class="form-control ckeditor-title" rows="1"
                                         value="{{ old('address', $footer->address ?? '') }}">
                                 </div>
 
