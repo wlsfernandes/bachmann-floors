@@ -28,15 +28,15 @@
 
                         {{-- TITLE --}}
                         @if (!empty($footer))
-                            <div class="cms-html mb-3 text-white">
+                            <div class="cms-html">
                                 {!! $footer->{'title_' . app()->getLocale()} ?? $footer->title_en !!}
                             </div>
                         @endif
 
                         {{-- SUBTITLE --}}
                         @if (!empty($footer))
-                            <div class="cms-html mb-4 text-white">
-                                {!! $footer->{'subtitle_' . app()->getLocale()} ?? $footer->subtitle_en !!}
+                            <div class="cms-html">
+                                {!! $footer->subtitle !!}
                             </div>
                         @endif
 
@@ -89,18 +89,24 @@
 
 
                         <div class="single-contact-info mb-2">
-                            <strong>@lang('home.contact_phone'):</strong><br>
-                            {{ $setting->contact_phone ?? '' }}
+                            <div class="cms-html">
+                                <strong>@lang('home.contact_phone'):</strong><br>
+                                {{ $setting->contact_phone ?? '' }}
+                            </div>
                         </div>
 
                         <div class="single-contact-info mb-2">
-                            <strong>@lang('home.contact_email'):</strong><br>
-                            {{ $setting->contact_email ?? '' }}
+                            <div class="cms-html">
+                                <strong>@lang('home.contact_email'):</strong><br>
+                                {{ $setting->contact_email ?? '' }}
+                            </div>
                         </div>
 
                         <div class="single-contact-info">
-                            <strong>@lang('home.contact_directions'):</strong><br>
-                            {{ $setting->address ?? '' }}
+                            <div class="cms-html">
+                                <strong>@lang('home.contact_directions'):</strong><br>
+                                {{ $setting->address ?? '' }}
+                            </div>
                         </div>
 
                     </div>
