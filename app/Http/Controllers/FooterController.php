@@ -19,7 +19,7 @@ class FooterController extends BaseController
             'subtitle_es' => ['nullable', 'string'],
             'image_url' => ['nullable', 'file', 'image', 'max:2048'], // ✅ important change
             'phone' => ['nullable', 'string'],
-            'email' => ['nullable', 'string', 'email'],
+            'email' => ['nullable', 'string'],
             'address' => ['nullable', 'string'],
         ]);
     }
