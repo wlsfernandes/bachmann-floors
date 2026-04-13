@@ -6,19 +6,19 @@
 
         <a href="{{ url('/') }}" class="logo logo-dark">
             <span class="logo-sm">
-                <img src="{{ asset('/assets/admin/images/passion2plant.webp') }}" height="60">
+                <img src="{{ asset('/assets/frontend/img/favicon.png') }}" height="60">
             </span>
             <span class="logo-lg">
-                <img src="{{ asset('/assets/admin/images/passion2plant.webp') }}" height="60">
+                <img src="{{ asset('/assets/frontend/img/favicon.png') }}" height="60">
             </span>
         </a>
 
         <a href="{{ url('/') }}" class="logo logo-light">
             <span class="logo-sm">
-                <img src="{{ asset('/assets/admin/images/passion2plant.webp') }}" height="60">
+                <img src="{{ asset('/assets/frontend/img/favicon.png') }}" height="60">
             </span>
             <span class="logo-lg">
-                <img src="{{ asset('/assets/admin/images/passion2plant.webp') }}" height="60">
+                <img src="{{ asset('/assets/frontend/img/favicon.png') }}" height="60">
             </span>
         </a>
 
