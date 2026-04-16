@@ -4,20 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Helpers\S3;
 use App\Models\Footer;
-use App\Services\SystemLogger;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class FooterController extends BaseController
 {
     private function validateData(Request $request): array
     {
         return $request->validate([
-            'title_en' => ['required', 'string', 'max:255'],
-            'title_es' => ['nullable', 'string', 'max:255'],
+            'title_en' => ['required', 'string'],
+            'title_es' => ['nullable', 'string'],
             'subtitle_en' => ['nullable', 'string'],
             'subtitle_es' => ['nullable', 'string'],
-            'image_url' => ['nullable', 'file', 'image', 'max:2048'], // ✅ important change
+
+            // FIX: allow string (existing path) OR file
+            'image_url' => ['nullable'],
+
             'phone' => ['nullable', 'string'],
             'email' => ['nullable', 'string'],
             'address' => ['nullable', 'string'],
@@ -41,20 +42,20 @@ class FooterController extends BaseController
     {
         $data = $this->validateData($request);
 
-        DB::beginTransaction();
-
         try {
             $footer = Footer::first();
 
             if ($request->hasFile('image_url')) {
                 $data['image_url'] = S3::uploadImageAsWebpPreset(
                     $request->file('image_url'),
-                    'footers', // ✅ better folder name
+                    'footers',
                     'cover',
                     1600,
                     600,
                     85
                 );
+            } else {
+                unset($data['image_url']);
             }
 
             if ($footer) {
@@ -63,25 +64,16 @@ class FooterController extends BaseController
                 $footer = Footer::create($data);
             }
 
-            DB::commit();
-
             return redirect()
                 ->route('footer.index')
                 ->with('success', 'Footer saved successfully.');
 
         } catch (\Throwable $e) {
-            DB::rollBack();
 
-            SystemLogger::log(
-                'Failed to save footer',
-                'error',
-                'footers.save',
-                [
-                    'error' => $e->getMessage(),
-                ]
-            );
-
-            return back()->withInput()->with('error', 'Something went wrong.');
+            dd([
+                'REAL_ERROR' => $e->getMessage(),
+                'DATA' => $data,
+            ]);
         }
     }
 
