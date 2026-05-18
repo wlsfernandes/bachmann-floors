@@ -1,7 +1,10 @@
 <?php
 
 return [
-
+    'home' => 'Home',
+    'projects' => 'Projects',
+    'services' => 'Services',
+    'contact' => 'Contact',
     'about_us' => 'About Us',
     'learn_more' => 'Learn More',
     'read_more' => 'Read More',

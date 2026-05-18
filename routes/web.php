@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AuditController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\BannerController;
@@ -31,14 +30,12 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ProjectImageController;
 use App\Http\Controllers\PublishController;
 use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SectionCardController;
 use App\Http\Controllers\SectionController;
-use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SocialLinkController;
 use App\Http\Controllers\StoreController;
@@ -78,16 +75,10 @@ Route::get('lang/{locale}', function ($locale) {
 Public web routes
 |-------------------------------------------------------------------------- */
 Route::get('/', [HomeController::class, 'index'])->name('index');
-
-/* About */
-Route::get('/about-us', [AboutController::class, 'indexPublic'])->name('about.index.public');
-
-/* pulpit-fellows */
-Route::get('/pulpit-fellows', [HomeController::class, 'pulpitFellows'])->name('pulpit-fellows');
-
-/* Blogs */
-Route::get('/blog/{blog:slug}', [BlogController::class, 'display'])->name('blogs.display');
-/* Book Recommendations */
+Route::get('/projects', [HomeController::class, 'projects'])->name('projects');
+Route::get('/services', [HomeController::class, 'services'])->name('services');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 /* Contact */
 Route::post('/send-message', [ContactController::class, 'send'])->name('contact.send')->middleware('throttle:5,1');
@@ -100,15 +91,13 @@ Route::get('/images/{model}/{id}/preview-field/{field}', [ImageUploadController:
 Route::get('/files/{model}/{id}/{lang}/download', [FileUploadController::class, 'download'])->name('admin.files.download');
 Route::delete('/images/{model}/{id}', [ImageUploadController::class, 'destroy'])->name('admin.images.destroy');
 Route::delete('/sections/{section}/delete-background-image', [SectionController::class, 'deleteBackgroundImage'])->name('sections.deleteBackgroundImage');
-/* Projects */
-Route::get('/our-projects/{slug}', [ProjectController::class, 'display'])->name('projects.display');
 
 Route::get('/our-collaborators/{slug}', [CollaboratorController::class, 'display'])->name('collaborators.display');
 
 /* positions */
 Route::get('/position/{slug}', [PositionController::class, 'display'])->name('positions.display');
 /* Services */
-Route::get('/service/{service:slug}', [ServiceController::class, 'display'])->name('services.display');
+
 /* Teams */
 Route::get('/team/{slug}', [TeamController::class, 'profile'])->name('team.profile');
 
@@ -199,7 +188,7 @@ Route::middleware(['auth', 'verified', 'can:access-website-admin'])->group(funct
     Route::resource('pages.sections.cards', SectionCardController::class)->scoped();
 
     Route::resource('menus', MenuController::class);
-    Route::resource('services', ServiceController::class);
+
     Route::resource('products', ProductController::class);
     Route::resource('stores', StoreController::class);
     Route::resource('wikipedias', WikipediaController::class);
@@ -255,7 +244,7 @@ Route::middleware(['auth', 'verified', 'can:access-website-admin'])->group(funct
     Route::post('footer/save', [FooterController::class, 'save'])->name('footer.save');
 
     // Content
-    Route::resource('abouts', AboutController::class);
+
     Route::resource('banners', BannerController::class);
     Route::resource('blogs', BlogController::class);
     Route::resource('book-recommendations', BookRecommendationController::class);
@@ -272,12 +261,12 @@ Route::middleware(['auth', 'verified', 'can:access-website-admin'])->group(funct
     Route::resource('partners', PartnerController::class);
     Route::resource('educators', EducatorController::class);
     Route::resource('positions', PositionController::class);
-    Route::resource('projects', ProjectController::class);
+
     Route::resource('collaborators', CollaboratorController::class);
     Route::resource('projects.images', ProjectImageController::class);
     Route::resource('collaborators.images', CollaboratorImageController::class);
     Route::resource('resources', ResourceController::class);
-    Route::resource('services', ServiceController::class);
+
     Route::resource('stores', StoreController::class);
     Route::resource('products', ProductController::class);
     Route::resource('teams', TeamController::class);

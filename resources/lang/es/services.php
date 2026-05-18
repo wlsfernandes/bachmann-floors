@@ -2,20 +2,35 @@
 
 return [
 
-    'title' => 'Instalación de Pisos para Hogares y Negocios',
+    'title' => 'Instalación de Pisos y Escaleras para Hogares y Negocios',
 
-    'description' => 'Ofrecemos servicios profesionales de instalación de pisos, reparación, restauración, mantenimiento y diseño personalizado para hogares y empresas.',
+    'description' => 'Nos especializamos en soluciones de pisos y escaleras de alta calidad, incluyendo madera sólida, laminado, loseta y vinilo. Ofrecemos instalación profesional, reparación, restauración y mantenimiento para espacios residenciales y comerciales.',
 
     'view_all' => 'Ver Todos los Servicios',
 
-    'premium' => 'Pisos Premium',
+    // Service Cards
+    'service_1_tag' => 'Expertos en Madera',
+    'service_1_title' => 'Instalación de <br> Madera',
 
-    'installation' => 'Instalación de Pisos',
-    'repairs' => 'Reparación de Pisos',
-    'refinishing' => 'Restauración de Pisos',
+    'service_2_tag' => 'Superficies Modernas',
+    'service_2_title' => 'Instalación de <br> Loseta y Vinilo',
 
-    'accordion_installation_title' => 'Instalación de Pisos',
+    'service_3_tag' => 'Restauración',
+    'service_3_title' => 'Reparación de <br> Pisos',
 
-    'accordion_installation_text' => 'La instalación de pisos implica la colocación profesional de materiales en espacios residenciales, comerciales o industriales. Trabajamos con madera, laminado, azulejos, alfombra y vinilo para garantizar durabilidad, estilo y rendimiento a largo plazo.',
+    'service_4_tag' => 'Renovación',
+    'service_4_title' => 'Restauración de <br> Pisos',
 
+    // Accordion
+    'accordion_1_title' => 'Instalación de Pisos',
+    'accordion_1_text' => 'En Bachmann Floors, la instalación incluye madera, laminado, loseta y vinilo para espacios residenciales y comerciales. Cada material requiere técnicas específicas para garantizar durabilidad y un acabado perfecto.',
+
+    'accordion_2_title' => 'Instalación de Escaleras',
+    'accordion_2_text' => 'Diseñamos e instalamos escaleras personalizadas utilizando madera de alta calidad, asegurando seguridad, resistencia y un diseño elegante.',
+
+    'accordion_3_title' => 'Reparación de Pisos',
+    'accordion_3_text' => 'Reparamos pisos dañados o desgastados, devolviendo su resistencia y apariencia original.',
+
+    'accordion_4_title' => 'Restauración de Pisos',
+    'accordion_4_text' => 'Nuestros servicios de restauración revitalizan los pisos de madera mediante lijado, teñido y sellado.',
 ];

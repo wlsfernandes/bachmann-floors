@@ -82,7 +82,7 @@
                 <div class="mb-3">
                     <label class="form-label">Contact Phone</label>
                     <input type="text" name="contact_phone" class="form-control" placeholder="+1 (555) 123-4567"
-                        value="{{ old('contact_phone', $setting->contact_phone) }}">
+                        value="{{ old('contact_phone', +1 (404) 207-4320) }}">
                     <small class="text-muted">
                         Optional phone number shown on contact sections.
                     </small>

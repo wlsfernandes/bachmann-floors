@@ -1,6 +1,13 @@
 <?php
 
 return [
+    'home' => 'Inicio',
+    'projects' => 'Proyectos',
+    'services' => 'Servicios',
+    'contact' => 'Contacto',
+    'about_us' => 'Sobre Nosotros',
+    'learn_more' => 'Aprende Más',
+    'read_more' => 'Leer Más',
     'title' => 'Bienvenido',
     'message' => 'Esta es una página de prueba simple.',
     'login' => 'Iniciar sesión',

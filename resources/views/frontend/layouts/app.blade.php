@@ -41,9 +41,7 @@
         @yield('content')
     </main>
 
-    {{-- Footer --}}
-    @includeIf('frontend.partials.footer')
-
+    @include('frontend.partials.new-footer')
     {{-- JS --}}
 
     <!-- jQuery -->

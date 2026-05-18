@@ -11,19 +11,26 @@
             <div class="container-fluid">
                 <div class="header-inner-box">
 
-                    <!-- Main Menu -->
-                    @include('frontend.pages.sections.menu', ['menuItems' => $menu])
+                    <!-- Main Menu  -->
+                    <div class="main-menu d-none d-lg-block">
+                        <ul>
+                            <li class="active"><a class="navlink" href="{{ url('/') }}">@lang('home.home')</a></li>
+                            <li><a class="navlink" href="{{ url('about') }}">@lang('home.about_us')</a>
+                            </li>
+                            <li><a class="navlink" href="{{ url('services') }}">@lang('home.services')</a>
+                            </li>
+                            <li><a class="navlink" href="{{ url('projects') }}">@lang('home.projects')</a>
+
+                            </li>
+                            <li><a class="navlink" href="{{ url('contact') }}">@lang('home.contact')</a></li>
+                        </ul>
+                    </div>
 
                     <!-- Logo -->
                     <div class="logo">
-                        @if (isset($setting) && $setting->image_url)
-                            <img src="{{ route('admin.images.preview', ['model' => 'settings', 'id' => $setting->id]) }}"
-                                alt="Banner image" style="width:198px;height:64px">
-                        @else
-                            <a class="navbar-brand" href="{{ url('/') }}">
-                                <img src="{{ asset('assets/frontend/img/logo-white.png') }}" alt="logo">
-                            </a>
-                        @endif
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            <img src="{{ asset('assets/frontend/img/logo/bachmannfloors.webp') }}" alt="logo">
+                        </a>
                     </div>
 
                     <div class="header-right">
@@ -43,11 +50,7 @@
                                 </a>
                             </li>
 
-                            <li>
-                                <a href="{{ url('/admin') }}" title="Admin">
-                                    <i class="las la-cog"></i>
-                                </a>
-                            </li>
+
                             <li><span></span></li>
 
                         </ul>
@@ -57,7 +60,7 @@
                                 <i class="las la-phone-volume"></i>
                             </div>
                             <div class="title">
-                                <h4>{{ $setting->contact_phone ?? '' }}</h4>
+                                <h4>+1 (404) 207-4320</h4>
                             </div>
                         </div>
 
@@ -119,12 +122,12 @@
                                 </nav>
 
                                 <div class="action-bar">
-                                    <a href="mailto:{{ $setting->contact_email ?? '' }}">
-                                        <i class="las la-envelope"></i> {{ $setting->contact_email ?? '' }}
+                                    <a href="mailto:bachmannfloors@gmail.com">
+                                        <i class="las la-envelope"></i> bachmannfloors@gmail.com
                                     </a>
 
-                                    <a href="tel:{{ $setting->contact_phone ?? '' }}">
-                                        <i class="fal fa-phone"></i> {{ $setting->contact_phone ?? '' }}
+                                    <a href="tel:+1 (404) 207-4320">
+                                        <i class="fal fa-phone"></i> +1 (404) 207-4320
                                     </a>
 
                                     <a href="{{ url('/contact') }}" class="theme-btn">
