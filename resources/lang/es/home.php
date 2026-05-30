@@ -2,7 +2,7 @@
 
 return [
     'home' => 'Inicio',
-    'projects' => 'Proyectos',
+    'projects_menu' => 'Proyectos',
     'services' => 'Servicios',
     'contact' => 'Contacto',
     'about_us' => 'Sobre Nosotros',
@@ -86,12 +86,331 @@ return [
     'contact_phone' => 'Teléfono',
     'contact_email' => 'Correo Electrónico',
     'contact_directions' => 'Direcciones',
-    'view_all_services' => 'Ver Todos los Servicios',
     'welcome_message' => 'Instalación de pisos para hogares y negocios',
     'get_in_touch' => 'Ponte en Contacto',
     'elevate' => 'Eleva la estética de tu hogar con pisos que combinan elegancia, durabilidad y diseño moderno, diseñados para durar y transformar cada espacio de manera hermosa.',
     'about_desc1' => 'En Backmann Floors nos apasiona transformar espacios con soluciones de pisos de alta calidad que combinan estilo, durabilidad y funcionalidad. Con más de una década de experiencia, nuestro equipo se especializa en instalaciones de madera, laminado, vinilo y azulejo para propiedades residenciales y comerciales. Nos enfocamos en la artesanía de calidad,excelentes materiales y completa satisfacción del cliente.',
     'since' => 'Desde',
-    'projects' => 'Proyectos',
     'satisfied_clients' => 'Clientes Satisfechos',
+    'meta' => [
+        'title' => 'Inicio | Bachmann Floors',
+    ],
+
+    'brand' => [
+        'name' => 'Bachmann Floors',
+    ],
+
+    'offcanvas' => [
+        'text' => 'Bienvenido a Bachmann Floors, una compañía familiar de pisos de madera enfocada en calidad, confianza y resultados hermosos que perduran.',
+        'button' => 'Contáctenos',
+        'image_alt' => 'Proyecto de pisos de madera de Bachmann Floors',
+    ],
+
+    'intro' => [
+        'subtitle' => 'Compañía Familiar de Pisos',
+        'title' => 'Pisos Hermosos. Trabajo Honesto. Un Hogar del Que Puede Sentirse Orgulloso.',
+        'lead' => 'Bachmann Floors es una pequeña compañía familiar construida sobre el buen oficio, la confianza y la convicción de que cada hogar merece un trabajo cuidadoso y respetuoso.',
+    ],
+
+    'why' => [
+        'subtitle' => 'Por Qué Nos Eligen los Propietarios',
+        'title' => 'No Apresuramos el Trabajo. Respetamos el Hogar.',
+        'description' => 'Su piso es una de las partes más visibles de su hogar. Tratamos cada proyecto con cuidado, desde la primera conversación hasta la limpieza final.',
+
+        'items' => [
+            [
+                'title' => 'Atención Personal',
+                'text' => 'Usted no es solo otro proyecto. Escuchamos, explicamos y le guiamos durante el proceso con honestidad y cuidado.',
+            ],
+            [
+                'title' => 'Materiales de Calidad',
+                'text' => 'Usamos materiales confiables seleccionados por su belleza, durabilidad y buen rendimiento a largo plazo en hogares reales.',
+            ],
+            [
+                'title' => 'Trabajo Cuidadoso',
+                'text' => 'Cada corte, acabado y detalle importa. Nuestro trabajo se basa en precisión, paciencia y orgullo por lo bien hecho.',
+            ],
+            [
+                'title' => 'Confianza Duradera',
+                'text' => 'Nuestro objetivo no es solo terminar un trabajo, sino construir una relación en la que su familia pueda confiar por muchos años.',
+            ],
+        ],
+    ],
+
+    'gallery' => [
+        'subtitle' => 'Nuestro Trabajo',
+        'title' => 'Pisos que Cambian la Sensación de un Hogar',
+        'text' => 'Desde tonos cálidos de madera hasta trabajos limpios de restauración, cada proyecto es una oportunidad para traer belleza, comodidad y valor a su espacio.',
+        'image_alt' => 'Imagen de galería de Bachmann Floors',
+    ],
+
+    'process' => [
+        'subtitle' => 'Nuestro Proceso',
+        'title' => 'Desde la Primera Conversación Hasta la Revisión Final',
+        'text' => 'Mantenemos el proceso simple, claro y respetuoso. Usted sabrá qué está ocurriendo, qué esperar y cómo estamos cuidando su hogar.',
+        'button' => 'Comenzar Su Proyecto',
+
+        'steps' => [
+            [
+                'icon' => '1.png',
+                'title' => 'Conversación y Estimado',
+                'text' => 'Escuchamos sus necesidades, revisamos su espacio, conversamos sobre opciones y ofrecemos un estimado claro para su proyecto.',
+            ],
+            [
+                'icon' => '2.png',
+                'title' => 'Guía de Materiales y Acabados',
+                'text' => 'Le ayudamos a elegir pisos, colores, acabados y detalles que se adapten a su hogar, estilo de vida y presupuesto.',
+            ],
+            [
+                'icon' => '3.png',
+                'title' => 'Instalación Cuidadosa',
+                'text' => 'Nuestro equipo prepara el espacio y realiza el trabajo con atención al detalle, limpieza y respeto por su hogar.',
+            ],
+            [
+                'icon' => '4.png',
+                'title' => 'Revisión Final',
+                'text' => 'Antes de terminar, revisamos el trabajo con usted para asegurarnos de que el resultado esté limpio, hermoso y listo para disfrutar.',
+            ],
+        ],
+    ],
+
+    'promise' => [
+        'subtitle' => 'La Promesa Bachmann',
+        'title' => 'Cuidado de Empresa Pequeña. Resultados Profesionales.',
+        'image_alt' => 'Trabajo artesanal en pisos de madera',
+
+        'paragraph_1' => 'Como compañía familiar, entendemos que su hogar es personal. Es el lugar donde su familia se reúne, descansa, celebra y construye recuerdos.',
+        'paragraph_2' => 'Por eso tratamos cada proyecto con respeto. Creemos que la mejor experiencia en pisos se construye con comunicación honesta, materiales de calidad y trabajo bien hecho.',
+
+        'points' => [
+            'Comunicación clara antes y durante el proyecto',
+            'Respeto por su hogar y por su tiempo',
+            'Trabajo de calidad sin atajos innecesarios',
+            'Resultados hermosos diseñados para durar',
+            'Una relación basada en confianza, no en presión',
+        ],
+
+        'button' => 'Conozca Nuestra Historia',
+    ],
+
+    'testimonials' => [
+        'subtitle' => 'Experiencia del Cliente',
+        'title' => 'Hogares Reales. Confianza Real. Buen Trabajo.',
+        'button' => 'Nuestros Servicios',
+
+        'items' => [
+            [
+                'text' => 'Bachmann Floors hizo que todo el proceso fuera sencillo. La comunicación fue clara, el trabajo fue limpio y los pisos transformaron completamente nuestro hogar.',
+                'name' => 'Familia Fernandes',
+                'label' => 'Proyecto de Pisos de Madera',
+            ],
+            [
+                'text' => 'Nos sentimos respetados desde el primer estimado hasta la revisión final. La atención al detalle y el cuidado por nuestro hogar marcaron una gran diferencia.',
+                'name' => 'Familia Sam',
+                'label' => 'Proyecto de Restauración de Pisos',
+            ],
+        ],
+    ],
+
+    'team' => [
+        'subtitle' => 'Nuestros Valores',
+        'title' => 'Una Compañía Construida Sobre Valores Familiares',
+        'text' => 'Bachmann Floors no busca sentirse como una gran corporación. Somos una pequeña compañía que cree en el trabajo honesto, las relaciones fuertes y en tratar a los clientes como vecinos.',
+        'button' => 'Conozca Bachmann Floors',
+
+        'values' => [
+            [
+                'image' => '1.jpg',
+                'label' => 'Valor',
+                'title' => 'Integridad',
+            ],
+            [
+                'image' => '2.jpg',
+                'label' => 'Valor',
+                'title' => 'Buen Oficio',
+            ],
+            [
+                'image' => '3.jpg',
+                'label' => 'Valor',
+                'title' => 'Respeto',
+            ],
+            [
+                'image' => '4.jpg',
+                'label' => 'Valor',
+                'title' => 'Confianza',
+            ],
+        ],
+    ],
+
+    'education' => [
+        'subtitle' => 'Orientación Útil',
+        'title' => 'Lo Que Todo Propietario Debe Saber Antes de Elegir Pisos',
+        'text' => 'Elegir pisos puede sentirse complicado. Le ayudamos a entender las opciones para que pueda tomar decisiones con confianza.',
+        'button' => 'Hacer una Pregunta',
+        'read_more' => 'Contáctenos',
+
+        'items' => [
+            [
+                'title' => 'Instalación de Madera',
+                'text' => 'Los pisos nuevos de madera pueden agregar calidez, valor y belleza duradera a su hogar cuando se instalan con preparación y cuidado.',
+            ],
+            [
+                'title' => 'Restauración de Pisos',
+                'text' => 'La restauración puede devolver vida a pisos antiguos de madera, recuperando color, suavidad y carácter sin reemplazarlo todo.',
+            ],
+            [
+                'title' => 'Elegir el Acabado Correcto',
+                'text' => 'El acabado correcto afecta la apariencia, durabilidad y mantenimiento de sus pisos. Le ayudamos a elegir lo que se adapta a su estilo de vida.',
+            ],
+            [
+                'title' => 'Cuidado de Sus Pisos',
+                'text' => 'Hábitos sencillos pueden ayudar a que sus pisos se mantengan hermosos por más tiempo, protegiendo su inversión y su hogar.',
+            ],
+        ],
+    ],
+
+    'cta' => [
+        'subtitle' => '¿Listo para Transformar su Hogar?',
+        'title' => 'Construyamos Algo Hermoso Bajo Sus Pies.',
+        'text' => 'Ya sea que necesite pisos nuevos de madera, restauración, reparación u orientación honesta, Bachmann Floors está listo para ayudarle a crear un hogar que ame.',
+        'button' => 'Solicitar un Estimado Gratis',
+    ],
+
+    'search' => [
+        'placeholder' => 'Escriba su búsqueda',
+    ],
+    'banners' => [
+        'primary_button' => 'Solicitar un Estimado Gratis',
+        'secondary_button' => 'Ver Nuestros Servicios',
+
+        'slides' => [
+            [
+                'image' => 'a1.jpg',
+                'overlay' => 'overlay-4',
+                'subtitle' => 'Pisos de Madera de Empresa Familiar',
+                'title' => '<span>Pisos Hermosos</span><br>Hechos con Trabajo Honesto',
+                'text' => 'Bachmann Floors trae buen oficio, cuidado y confianza a cada hogar que servimos. Desde instalación hasta restauración, le ayudamos a crear pisos que su familia amará por años.',
+            ],
+            [
+                'image' => 'a2.jpg',
+                'overlay' => 'overlay-5',
+                'subtitle' => 'Calidad Antes que Prisa',
+                'title' => 'No Apresuramos.<br><span>Lo Hacemos Bien.</span>',
+                'text' => 'Su hogar merece más que un trabajo rápido. Usamos materiales de calidad, preparación cuidadosa y manos expertas para entregar pisos hermosos y duraderos.',
+            ],
+            [
+                'image' => 'a3.jpg',
+                'overlay' => 'overlay-4',
+                'subtitle' => 'Pisos que Se Sienten Como Hogar',
+                'title' => 'Transforme Su Espacio<br><span>Un Piso a la Vez</span>',
+                'text' => 'Ya sea que esté restaurando madera antigua o instalando algo nuevo, Bachmann Floors está aquí para guiarle con servicio honesto y resultados profesionales.',
+            ],
+        ],
+    ],
+    'projects' => [
+        'subtitle' => 'Hogares Reales. Trabajo Real.',
+        'title' => 'Pisos Simples y Hermosos para Familias Como la Suya',
+        'text' => 'Cada hogar tiene su propia historia. Nuestro trabajo es ayudar a que esa historia se sienta más cálida, limpia y hermosa con pisos instalados y restaurados con cuidado.',
+        'button' => 'Ver Nuestro Trabajo',
+
+        'items' => [
+            [
+                'image' => '1.jpg',
+                'label' => 'Belleza en Madera',
+                'title' => 'Espacios Cálidos para Vivir',
+            ],
+            [
+                'image' => '2.jpg',
+                'label' => 'Renovación del Hogar',
+                'title' => 'Pisos Nuevos para la Vida Diaria',
+            ],
+            [
+                'image' => '3.jpg',
+                'label' => 'Para Toda la Familia',
+                'title' => 'Pisos Hechos para Hogares Reales',
+            ],
+            [
+                'image' => '4.jpg',
+                'label' => 'Acabado Limpio',
+                'title' => 'Detalles Simples, Resultados Hermosos',
+            ],
+            [
+                'image' => '5.jpg',
+                'label' => 'Carácter Restaurado',
+                'title' => 'Dando Nueva Vida a Pisos de Madera',
+            ],
+            [
+                'image' => '6.jpg',
+                'label' => 'Trabajo Confiable',
+                'title' => 'Trabajo Hecho con Cuidado',
+            ],
+        ],
+
+        'slider' => [
+            '2-1.jpg',
+            '2-2.jpg',
+            '2-4.jpg',
+        ],
+
+        'slider_alt' => 'Imagen de proyecto de Bachmann Floors',
+    ],
+
+    'simple_process' => [
+        'subtitle' => 'Un Proceso Simple',
+        'title' => 'Sin Presión. Sin Confusión. Solo Orientación Honesta.',
+        'text' => 'Mantenemos el proceso claro y cómodo desde la primera conversación hasta la revisión final. Usted sabrá qué estamos haciendo, por qué lo hacemos y cómo estamos cuidando su hogar.',
+        'button' => 'Contáctenos',
+
+        'steps' => [
+            [
+                'icon' => '2-1.png',
+                'title' => 'Primero Escuchamos',
+                'text' => 'Comenzamos entendiendo su hogar, sus necesidades, su estilo y su presupuesto antes de recomendar cualquier opción.',
+            ],
+            [
+                'icon' => '2-2.png',
+                'title' => 'Le Ayudamos a Elegir',
+                'text' => 'Le guiamos con opciones de pisos, colores, acabados y detalles prácticos para que pueda decidir con confianza.',
+            ],
+            [
+                'icon' => '2-3.png',
+                'title' => 'Hacemos el Trabajo Bien',
+                'text' => 'Preparamos con cuidado, trabajamos con respeto y cuidamos los detalles para que sus pisos se vean hermosos y duren más.',
+            ],
+        ],
+    ],
+    'projects_2' => [
+        'subtitle' => 'Real Homes. Real Work.',
+        'title' => 'Simple, Beautiful Flooring Work for Families Like Yours',
+        'text' => 'Every home has its own story. Our work is to help make that story warmer, cleaner, and more beautiful with floors installed and restored with care.',
+        'button' => 'View Our Work',
+
+        'items' => [
+            [
+                'image' => '1.jpg',
+                'label' => 'Hardwood Beauty',
+                'title' => 'Warm Living Spaces',
+            ],
+            [
+                'image' => '2.jpg',
+                'label' => 'Home Renewal',
+                'title' => 'Fresh Floors for Everyday Life',
+            ],
+            [
+                'image' => '3.jpg',
+                'label' => 'Family Friendly',
+                'title' => 'Floors Made for Real Homes',
+            ],
+            [
+                'image' => '4.jpg',
+                'label' => 'Clean Finish',
+                'title' => 'Simple Details, Beautiful Results',
+            ],
+            [
+                'image' => '5.jpg',
+                'label' => 'Restored Character',
+                'title' => 'Bringing Wood Floors Back to Life',
+            ],
+        ],
+    ],
 ];

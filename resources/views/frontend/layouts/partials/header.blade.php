@@ -19,7 +19,7 @@
                             </li>
                             <li><a class="navlink" href="{{ url('services') }}">@lang('home.services')</a>
                             </li>
-                            <li><a class="navlink" href="{{ url('projects') }}">@lang('home.projects')</a>
+                            <li><a class="navlink" href="{{ url('projects') }}">@lang('home.projects_menu')</a>
 
                             </li>
                             <li><a class="navlink" href="{{ url('contact') }}">@lang('home.contact')</a></li>

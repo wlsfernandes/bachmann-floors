@@ -1,9 +1,10 @@
 {{-- resources/views/frontend/pages/home.blade.php --}}
 @extends('frontend.layouts.app')
 
-@section('title', 'Home | Bachmann Floors')
+@section('title', __('home.meta.title'))
 
 @section('content')
+
     {{-- SUCCESS ALERT --}}
     @if (session('success'))
         <div class="container mt-3">
@@ -13,29 +14,41 @@
         </div>
     @endif
 
+    {{-- HERO / BANNERS --}}
     @include('frontend.partials.banners')
 
-    <!-- Off-canvas Area-->
+
+    {{-- ===============================
+        OFF-CANVAS AREA
+    ================================ --}}
     <div class="extra-info">
         <div class="close-icon menu-close">
             <button>
                 <i class="las la-times"></i>
             </button>
         </div>
+
         <div class="logo-side">
             <div class="logo">
-                <a href="index.html"><img src="assets/frontend/img/logo-white.png" alt=""></a>
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('assets/frontend/img/logo-white.png') }}" alt="{{ __('home.brand.name') }}">
+                </a>
             </div>
         </div>
+
         <div class="side-info">
             <div class="contact-list mb-40">
-                <p>Welcome to Bachmann Floors, A Full Service of Flooring and Tilling Works. </p>
-                <img src="assets/frontend/img/off-canvas.jpg" alt="">
+                <p>{{ __('home.offcanvas.text') }}</p>
+
+                <img src="{{ asset('assets/frontend/img/off-canvas.jpg') }}" alt="{{ __('home.offcanvas.image_alt') }}">
 
                 <div class="mt-30 mb-30">
-                    <a href="{{ url('contact') }}" class="white-btn">Get In Touch</a>
+                    <a href="{{ url('contact') }}" class="white-btn">
+                        {{ __('home.offcanvas.button') }}
+                    </a>
                 </div>
             </div>
+
             <div class="social-area-wrap">
                 <a href="#"><i class="lab la-facebook-f"></i></a>
                 <a href="#"><i class="lab la-instagram"></i></a>
@@ -47,353 +60,607 @@
 
     <div class="offcanvas-overlay"></div>
 
+
+    {{-- ===============================
+        TRUST INTRO SECTION
+    ================================ --}}
+    <div class="home-intro-section section-padding pb-0">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-xl-9 col-lg-10">
+
+                    <span class="section-subtitle">
+                        {{ __('home.intro.subtitle') }}
+                    </span>
+
+                    <h2 class="visible-slowly-right">
+                        {{ __('home.intro.title') }}
+                    </h2>
+
+                    <p class="lead mt-4">
+                        {{ __('home.intro.lead') }}
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {{-- SERVICES PARTIAL --}}
     @include('frontend.partials.services')
 
+
+    {{-- ABOUT PARTIAL --}}
     @include('frontend.partials.about')
 
 
-    <!-- Gallery Section -->
+    {{-- ===============================
+        WHY CHOOSE US SECTION
+    ================================ --}}
+    <div class="why-section section-padding pt-0">
+        <div class="container">
+
+            <div class="row align-items-end mb-5">
+                <div class="col-xl-6 col-lg-7">
+                    <div class="section-title">
+                        <span class="section-subtitle">
+                            {{ __('home.why.subtitle') }}
+                        </span>
+
+                        <h2 class="visible-slowly-right">
+                            {{ __('home.why.title') }}
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-lg-5 text-lg-end">
+                    <p class="mb-0">
+                        {{ __('home.why.description') }}
+                    </p>
+                </div>
+            </div>
+
+            <div class="row gy-4">
+                @foreach (__('home.why.items') as $item)
+                    <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp animated"
+                        data-wow-delay="{{ 200 * $loop->iteration }}ms">
+
+                        <div class="home-feature-card h-100">
+                            <div class="home-feature-number">
+                                {{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}
+                            </div>
+
+                            <h5>{{ $item['title'] }}</h5>
+                            <p>{{ $item['text'] }}</p>
+                        </div>
+
+                    </div>
+                @endforeach
+            </div>
+
+        </div>
+    </div>
+
+
+    {{-- ===============================
+        GALLERY SECTION
+    ================================ --}}
     <div class="gallery-section gray-bg section-padding">
         <div class="container">
-            <div class="row gy-4">
-                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated" data-wow-delay="200ms">
-                    <a href="assets/frontend/img/gallery/1.jpg" data-fancybox="gallery">
-                        <img src="assets/frontend/img/gallery/1.jpg" alt="">
-                    </a>
+
+            <div class="row align-items-end mb-5">
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <span class="section-subtitle">
+                            {{ __('home.gallery.subtitle') }}
+                        </span>
+
+                        <h2 class="visible-slowly-right">
+                            {{ __('home.gallery.title') }}
+                        </h2>
+                    </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated" data-wow-delay="400ms">
-                    <a href="assets/frontend/img/gallery/2.jpg" data-fancybox="gallery">
-                        <img src="assets/frontend/img/gallery/2.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated" data-wow-delay="600ms">
-                    <a href="assets/frontend/img/gallery/3.jpg" data-fancybox="gallery">
-                        <img src="assets/frontend/img/gallery/3.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated" data-wow-delay="200ms">
-                    <a href="assets/frontend/img/gallery/4.jpg" data-fancybox="gallery">
-                        <img src="assets/frontend/img/gallery/4.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated" data-wow-delay="400ms">
-                    <a href="assets/frontend/img/gallery/5.jpg" data-fancybox="gallery">
-                        <img src="assets/frontend/img/gallery/5.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated" data-wow-delay="600ms">
-                    <a href="assets/frontend/img/gallery/6.jpg" data-fancybox="gallery">
-                        <img src="assets/frontend/img/gallery/6.jpg" alt="">
-                    </a>
+
+                <div class="col-lg-5 text-lg-end">
+                    <p class="mb-0">
+                        {{ __('home.gallery.text') }}
+                    </p>
                 </div>
             </div>
+
+            <div class="row gy-4">
+                @for ($i = 1; $i <= 6; $i++)
+                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated"
+                        data-wow-delay="{{ 200 * ((($i - 1) % 3) + 1) }}ms">
+
+                        <a href="{{ asset('assets/frontend/img/gallery/' . $i . '.jpg') }}" data-fancybox="gallery">
+
+                            <img src="{{ asset('assets/frontend/img/gallery/' . $i . '.jpg') }}"
+                                alt="{{ __('home.gallery.image_alt') }} {{ $i }}">
+
+                        </a>
+                    </div>
+                @endfor
+            </div>
+
         </div>
     </div>
 
+
+    {{-- PROJECTS PARTIAL --}}
     @include('frontend.partials.projects')
-    <!-- Process Section -->
+
+
+    {{-- ===============================
+        PROCESS SECTION
+    ================================ --}}
     <div id="process-1" class="process-section section-padding pt-0 pb-0">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-end">
                 <div class="col-xl-5 col-lg-6 col-md-7">
                     <div class="section-title">
-                        <h2 class="visible-slowly-right">From consultation to perfection, every time</h2>
-                        <p class="pt-20 wow fadeInUp animated" data-wow-delay=".4s">Our seamless flooring process ensures
-                            quality from consultation to installation, guaranteeing satisfaction every step of the way.</p>
+                        <span class="section-subtitle">
+                            {{ __('home.process.subtitle') }}
+                        </span>
+
+                        <h2 class="visible-slowly-right">
+                            {{ __('home.process.title') }}
+                        </h2>
+
+                        <p class="pt-20 wow fadeInUp animated" data-wow-delay=".4s">
+                            {{ __('home.process.text') }}
+                        </p>
                     </div>
                 </div>
+
                 <div class="col-xl-7 col-lg-6 col-md-5 text-md-end">
-                    <a href="{{ url('contact') }}" class="bordered-btn">Our Process <i
-                            class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ url('contact') }}" class="bordered-btn">
+                        {{ __('home.process.button') }}
+                        <i class="fa-light fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
+
         <div class="row mt-30 process-bg-wrap align-items-center justify-content-center"
-            data-background="assets/frontend/img/process-bg.jpg">
-            <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInLeft animated" data-wow-delay="200ms">
-                <div class="single-process-item">
-                    <div class="process-icon">
-                        <img src="assets/frontend/img/process/1.png" alt="">
-                        <span class="step-count">1.</span>
-                        <div class="process-line d-none d-md-inline-block"></div>
+            data-background="{{ asset('assets/frontend/img/process-bg.jpg') }}">
+
+            @foreach (__('home.process.steps') as $step)
+                <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInLeft animated"
+                    data-wow-delay="{{ 200 * $loop->iteration }}ms">
+
+                    <div class="single-process-item">
+                        <div class="process-icon">
+                            <img src="{{ asset('assets/frontend/img/process/' . $step['icon']) }}"
+                                alt="{{ $step['title'] }}">
+
+                            <span class="step-count">{{ $loop->iteration }}.</span>
+
+                            @if (!$loop->last)
+                                <div class="process-line d-none d-md-inline-block"></div>
+                            @endif
+                        </div>
+
+                        <div class="process-title">
+                            <h5>{{ $step['title'] }}</h5>
+                        </div>
+
+                        <div class="process-content">
+                            <p>{{ $step['text'] }}</p>
+                        </div>
                     </div>
-                    <div class="process-title">
-                        <h5>Consultation & meeting</h5>
-                    </div>
-                    <div class="process-content">
-                        <p>The architecture company meets with the client to discuss their needs, budget, and timeline.</p>
+
+                </div>
+            @endforeach
+
+        </div>
+    </div>
+
+
+    {{-- ===============================
+        FAMILY-OWNED PROMISE SECTION
+    ================================ --}}
+    <div class="family-promise-section section-padding">
+        <div class="container">
+            <div class="row gy-5 align-items-center">
+
+                <div class="col-lg-6">
+                    <div class="about-more-img obverse">
+                        <img src="{{ asset('assets/frontend/img/about/about-more-img-1.jpg') }}"
+                            alt="{{ __('home.promise.image_alt') }}">
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInLeft animated" data-wow-delay="400ms">
-                <div class="single-process-item">
-                    <div class="process-icon">
-                        <img src="assets/frontend/img/process/2.png" alt="">
-                        <span class="step-count">2.</span>
-                        <div class="process-line d-none d-lg-inline-block"></div>
-                    </div>
-                    <div class="process-title">
-                        <h5>Concept design</h5>
-                    </div>
-                    <div class="process-content">
-                        <p>Based on the client's requirements, the architecture company creates a concept design.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInLeft animated" data-wow-delay="600ms">
-                <div class="single-process-item">
-                    <div class="process-icon">
-                        <img src="assets/frontend/img/process/3.png" alt="">
-                        <span class="step-count">3.</span>
-                        <div class="process-line d-none d-md-inline-block"></div>
-                    </div>
-                    <div class="process-title">
-                        <h5>Design development</h5>
-                    </div>
-                    <div class="process-content">
-                        <p>The architecture company meets with the client to discuss their needs, budget, and timeline.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInLeft animated" data-wow-delay="800ms">
-                <div class="single-process-item">
-                    <div class="process-icon">
-                        <img src="assets/frontend/img/process/4.png" alt="">
-                        <span class="step-count">4.</span>
-                    </div>
-                    <div class="process-title">
-                        <h5>Permitting & approvals</h5>
-                    </div>
-                    <div class="process-content">
-                        <p>The architecture company meets with the client to discuss their needs, budget, and timeline.</p>
+
+                <div class="col-lg-6">
+                    <div class="about-content-wrap ps-lg-5">
+
+                        <span class="section-subtitle">
+                            {{ __('home.promise.subtitle') }}
+                        </span>
+
+                        <h2 class="visible-slowly-right">
+                            {{ __('home.promise.title') }}
+                        </h2>
+
+                        <p class="mt-4">
+                            {{ __('home.promise.paragraph_1') }}
+                        </p>
+
+                        <p>
+                            {{ __('home.promise.paragraph_2') }}
+                        </p>
+
+                        <div class="promise-list mt-4">
+                            @foreach (__('home.promise.points') as $point)
+                                <div class="promise-list-item">
+                                    <span>✓</span>
+                                    <p>{{ $point }}</p>
+                                </div>
+                            @endforeach
+                        </div>
+
+                        <div class="mt-4">
+                            <a href="{{ url('about') }}" class="bordered-btn">
+                                {{ __('home.promise.button') }}
+                                <i class="fa-light fa-arrow-right"></i>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 
-    <!-- Testimonial Section -->
-    <div class="testimonial-section section-padding">
+
+    {{-- ===============================
+        TESTIMONIAL SECTION
+    ================================ --}}
+    <div class="testimonial-section section-padding pt-0">
         <div class="container">
-            <div class="row">
+
+            <div class="row align-items-end">
                 <div class="col-xl-5 col-lg-6 col-md-7">
                     <div class="section-title">
-                        <h2 class="visible-slowly-right">Real Customers, Real Reviews, Real Quality!</h2>
+                        <span class="section-subtitle">
+                            {{ __('home.testimonials.subtitle') }}
+                        </span>
+
+                        <h2 class="visible-slowly-right">
+                            {{ __('home.testimonials.title') }}
+                        </h2>
                     </div>
                 </div>
+
                 <div class="col-xl-7 col-lg-6 col-md-5 text-md-end">
-                    <a href="{{ url('services') }}" class="bordered-btn">Testimonial <i
-                            class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ url('services') }}" class="bordered-btn">
+                        {{ __('home.testimonials.button') }}
+                        <i class="fa-light fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
+
             <div class="row">
                 <div class="testimonial-one owl-carousel">
-                    <div class="single-testimonial-item">
-                        <div class="testimonial-quote">
-                            <img src="assets/frontend/img/quote.png" alt="">
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                <p>I couldn’t be happier with my new hardwood floors from Florz Flooring! The team was
-                                    professional, attentive, and guided me through every step of the process. The
-                                    installation was seamless, and the quality of the work is outstanding. Highly recommend!
-                                </p>
+
+                    @foreach (__('home.testimonials.items') as $testimonial)
+                        <div class="single-testimonial-item">
+                            <div class="testimonial-quote">
+                                <img src="{{ asset('assets/frontend/img/quote.png') }}" alt="">
                             </div>
-                            <div class="testimonial-author">
-                                <h5>James Clark</h5>
-                                <span>CEO, Alfa Inc.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-testimonial-item">
-                        <div class="testimonial-quote">
-                            <img src="assets/frontend/img/quote.png" alt="">
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                <p>I couldn’t be happier with my new hardwood floors from Florz Flooring! The team was
-                                    professional, attentive, and guided me through every step of the process. The
-                                    installation was seamless, and the quality of the work is outstanding. Highly recommend!
-                                </p>
-                            </div>
-                            <div class="testimonial-author">
-                                <h5>James Clark</h5>
-                                <span>CEO, Alfa Inc.</span>
+
+                            <div class="testimonial-content">
+                                <div class="testimonial-text">
+                                    <p>{{ $testimonial['text'] }}</p>
+                                </div>
+
+                                <div class="testimonial-author">
+                                    <h5>{{ $testimonial['name'] }}</h5>
+                                    <span>{{ $testimonial['label'] }}</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
+
         </div>
     </div>
 
-    <!-- Team Section -->
-    <div class="team-section section-padding pt-0 pb-90">
+
+    {{-- ===============================
+        SMALL TEAM / OWNER SECTION
+    ================================ --}}
+    {{--    <div class="team-section section-padding pt-0 pb-90">
         <div class="container">
-            <div class="row">
+
+            <div class="row align-items-end">
                 <div class="col-xl-6 col-lg-6 col-md-7">
                     <div class="section-title">
-                        <h2 class="visible-slowly-right">Meet our skilled team of flooring experts</h2>
+                        <span class="section-subtitle">
+                            {{ __('home.team.subtitle') }}
+                        </span>
+
+                        <h2 class="visible-slowly-right">
+                            {{ __('home.team.title') }}
+                        </h2>
                     </div>
-                    <p class="wow fadeInUp animated" data-wow-delay=".4s">We provide professional flooring installation,
-                        repair, refinishing, maintenance, and custom design services for homes and businesses.</p>
+
+                    <p class="wow fadeInUp animated" data-wow-delay=".4s">
+                        {{ __('home.team.text') }}
+                    </p>
                 </div>
+
                 <div class="col-xl-6 col-lg-6 col-md-5 text-md-end">
-                    <a href="team.html" class="bordered-btn">Our Team <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ url('about') }}" class="bordered-btn">
+                        {{ __('home.team.button') }}
+                        <i class="fa-light fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-            <div class="row mt-30">
-                <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp animated" data-wow-delay="200ms">
-                    <div class="single-team-item">
-                        <div class="team-img">
-                            <img src="assets/frontend/img/team/1.jpg" alt="">
+
+              <div class="row mt-30 gy-4">
+
+                @foreach (__('home.team.values') as $value)
+                    <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp animated"
+                        data-wow-delay="{{ 200 * $loop->iteration }}ms">
+
+                        <div class="single-team-item home-value-item">
+                            <div class="team-img">
+                                <img src="{{ asset('assets/frontend/img/team/' . $value['image']) }}"
+                                    alt="{{ $value['title'] }}">
+                            </div>
+
+                            <div class="team-info">
+                                <span>{{ $value['label'] }}</span>
+                                <h5>{{ $value['title'] }}</h5>
+                            </div>
                         </div>
-                        <div class="team-info">
-                            <span>CTO</span>
-                            <h5>Benjamin Scott</h5>
-                        </div>
+
                     </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp animated" data-wow-delay="400ms">
-                    <div class="single-team-item">
-                        <div class="team-img">
-                            <img src="assets/frontend/img/team/2.jpg" alt="">
-                        </div>
-                        <div class="team-info">
-                            <span>Director</span>
-                            <h5>Anna Hallberg</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp animated" data-wow-delay="600ms">
-                    <div class="single-team-item">
-                        <div class="team-img">
-                            <img src="assets/frontend/img/team/3.jpg" alt="">
-                        </div>
-                        <div class="team-info">
-                            <span>Manager</span>
-                            <h5>Deniel Lee</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp animated" data-wow-delay="800ms">
-                    <div class="single-team-item">
-                        <div class="team-img">
-                            <img src="assets/frontend/img/team/4.jpg" alt="">
-                        </div>
-                        <div class="team-info">
-                            <span>Engineer</span>
-                            <h5>Sophia Ramirez</h5>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
+
         </div>
     </div>
+    --}}
 
-    <!-- Blog Section -->
+    {{-- ===============================
+        BLOG / EDUCATION SECTION
+    ================================ --}}
     <div id="blog-1" class="blog-section section-padding pt-0 pb-90">
         <div class="container">
-            <div class="row">
+
+            <div class="row align-items-end">
                 <div class="col-xl-6 col-lg-6 col-md-7">
                     <div class="section-title">
-                        <h2 class="visible-slowly-right">Fresh flooring news, insights, and updates</h2>
+                        <span class="section-subtitle">
+                            {{ __('home.education.subtitle') }}
+                        </span>
+
+                        <h2 class="visible-slowly-right">
+                            {{ __('home.education.title') }}
+                        </h2>
                     </div>
-                    <p class="wow fadeInUp animated" data-wow-delay=".4s">We provide professional flooring installation,
-                        repair, refinishing, maintenance, and custom design services for homes and businesses.</p>
+
+                    <p class="wow fadeInUp animated" data-wow-delay=".4s">
+                        {{ __('home.education.text') }}
+                    </p>
                 </div>
+
                 <div class="col-xl-6 col-lg-6 col-md-5 text-md-end">
-                    <a href="blog.html" class="bordered-btn">View Latest News <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ url('contact') }}" class="bordered-btn">
+                        {{ __('home.education.button') }}
+                        <i class="fa-light fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
+
             <div class="row mt-60">
-                <div class="col-lg-6 col-md-12 wow fadeInUp animated" data-wow-delay="200ms">
-                    <div class="single-blog-item">
-                        <div class="blog-title">
-                            <h5><a href="blog-details.html">Talent Management</a></h5>
-                        </div>
-                        <div class="blog-content">
-                            <p>Talent management in the flooring industry, like in any other sector, plays a crucial role in
-                                ensuring a business’</p>
-                        </div>
-                        <a href="blog-details.html" class="read-more-btn bordered-btn">Read More</a>
-                        <hr>
-                    </div>
+                @foreach (__('home.education.items') as $item)
+                    <div class="col-lg-6 col-md-12 wow fadeInUp animated"
+                        data-wow-delay="{{ 200 * $loop->iteration }}ms">
 
-                </div>
-                <div class="col-lg-6 col-md-12 wow fadeInUp animated" data-wow-delay="400ms">
-                    <div class="single-blog-item">
-                        <div class="blog-title">
-                            <h5><a href="blog-details.html">Sustaintable Materials</a></h5>
+                        <div class="single-blog-item">
+                            <div class="blog-title">
+                                <h5>
+                                    <a href="{{ url('contact') }}">
+                                        {{ $item['title'] }}
+                                    </a>
+                                </h5>
+                            </div>
+
+                            <div class="blog-content">
+                                <p>{{ $item['text'] }}</p>
+                            </div>
+
+                            <a href="{{ url('contact') }}" class="read-more-btn bordered-btn">
+                                {{ __('home.education.read_more') }}
+                            </a>
+
+                            @if (!$loop->last)
+                                <hr>
+                            @endif
                         </div>
-                        <div class="blog-content">
-                            <p>Talent management in the flooring industry, like in any other sector, plays a crucial role in
-                                ensuring a business’</p>
-                        </div>
-                        <a href="blog-details.html" class="read-more-btn bordered-btn">Read More</a>
-                        <hr>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 wow fadeInUp animated" data-wow-delay="600ms">
-                    <div class="single-blog-item">
-                        <div class="blog-title">
-                            <h5><a href="blog-details.html">Technological Innovation</a></h5>
-                        </div>
-                        <div class="blog-content">
-                            <p>Talent management in the flooring industry, like in any other sector, plays a crucial role in
-                                ensuring a business’</p>
-                        </div>
-                        <a href="blog-details.html" class="read-more-btn bordered-btn">Read More</a>
 
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-12 wow fadeInUp animated" data-wow-delay="800ms">
-                    <div class="single-blog-item">
-                        <div class="blog-title">
-                            <h5><a href="blog-details.html">Dopamine Detox</a></h5>
-                        </div>
-                        <div class="blog-content">
-                            <p>Talent management in the flooring industry, like in any other sector, plays a crucial role in
-                                ensuring a business’</p>
-                        </div>
-                        <a href="blog-details.html" class="read-more-btn bordered-btn">Read More</a>
+                @endforeach
+            </div>
 
-                    </div>
+        </div>
+    </div>
+
+
+    {{-- ===============================
+        FINAL CTA
+    ================================ --}}
+    <div class="home-final-cta section-padding">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-xl-8 col-lg-9">
+
+                    <span class="section-subtitle">
+                        {{ __('home.cta.subtitle') }}
+                    </span>
+
+                    <h2 class="visible-slowly-right">
+                        {{ __('home.cta.title') }}
+                    </h2>
+
+                    <p class="mt-4 mb-4">
+                        {{ __('home.cta.text') }}
+                    </p>
+
+                    <a href="{{ url('contact') }}" class="theme-btn">
+                        {{ __('home.cta.button') }}
+                    </a>
+
                 </div>
             </div>
         </div>
     </div>
 
 
-
-    {{-- Old Footer (for reference) --}}
-
-    <!-- Search Dropdown -->
+    {{-- SEARCH DROPDOWN --}}
     <div class="search-popup">
         <span class="search-back-drop"></span>
 
         <div class="search-inner">
             <div class="container">
                 <div class="logo">
-                    <a class="navbar-brand" href="index.html"><img src="assets/frontend/img/logo-white.png"
-                            alt=""></a>
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img src="{{ asset('assets/frontend/img/logo-white.png') }}" alt="{{ __('home.brand.name') }}">
+                    </a>
                 </div>
-                <button class="close-search"><span class="la la-times"></span></button>
-                <form method="post" action="index.html">
+
+                <button class="close-search">
+                    <span class="la la-times"></span>
+                </button>
+
+                <form method="get" action="{{ url('/') }}">
                     <div class="form-group">
-                        <input type="search" name="search-field" value="" placeholder="Type your keyword"
-                            required="">
-                        <button type="submit"><i class="fal fa-search"></i></button>
+                        <input type="search" name="search" value=""
+                            placeholder="{{ __('home.search.placeholder') }}">
+                        <button type="submit">
+                            <i class="fal fa-search"></i>
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- back to top start -->
+
+    {{-- BACK TO TOP --}}
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
     </div>
+
 @endsection
+
+
+@push('styles')
+    <style>
+        .section-subtitle {
+            display: inline-block;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            font-size: 13px;
+            margin-bottom: 14px;
+            opacity: .75;
+        }
+
+        .lead {
+            font-size: 20px;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
+        .home-feature-card {
+            background: #fff;
+            padding: 34px 28px;
+            border-radius: 8px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, .06);
+            transition: all .3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .home-feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .10);
+        }
+
+        .home-feature-number {
+            font-size: 48px;
+            line-height: 1;
+            font-weight: 800;
+            opacity: .10;
+            margin-bottom: 22px;
+        }
+
+        .home-feature-card h5 {
+            margin-bottom: 14px;
+        }
+
+        .home-feature-card p {
+            margin-bottom: 0;
+        }
+
+        .family-promise-section {
+            background: #f7f3ee;
+        }
+
+        .promise-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .promise-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .promise-list-item span {
+            width: 26px;
+            min-width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, .08);
+            font-weight: 700;
+        }
+
+        .promise-list-item p {
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        .home-value-item .team-info span {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 12px;
+        }
+
+        .home-final-cta {
+            background: #111;
+            color: #fff;
+        }
+
+        .home-final-cta h2,
+        .home-final-cta p,
+        .home-final-cta .section-subtitle {
+            color: #fff;
+        }
+    </style>
+@endpush
