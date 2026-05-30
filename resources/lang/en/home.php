@@ -409,4 +409,30 @@ return [
             ],
         ],
     ],
+    'local' => [
+        'subtitle' => 'Local to Marietta and Nearby Communities',
+        'title' => 'A Local Flooring Company<br>Serving Homes With Care',
+        'paragraph_1' => 'Bachmann Floors is proud to serve Marietta and the surrounding region with honest, family-owned flooring services. We are not trying to feel like a large national company. We are local, personal, and committed to doing the work the right way.',
+        'paragraph_2' => 'When you invite us into your home, we understand the trust that requires. That is why we show up with respect, communicate clearly, and treat every project as if we were working for a neighbor.',
+
+        'areas' => [
+            'Marietta',
+            'East Cobb',
+            'Kennesaw',
+            'Smyrna',
+            'Roswell',
+            'Woodstock',
+            'Cobb County',
+            'Nearby Georgia Communities',
+        ],
+
+        'button' => 'Schedule a Local Estimate',
+        'image_alt' => 'Bachmann Floors serving Marietta and nearby homes',
+
+        'card_1_title' => 'Local Service',
+        'card_1_text' => 'We know the homes, neighborhoods, and families of the Marietta area.',
+
+        'card_2_title' => 'Neighborly Care',
+        'card_2_text' => 'Clear communication, respectful work, and floors made to last.',
+    ],
 ];

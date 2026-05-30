@@ -413,4 +413,30 @@ return [
             ],
         ],
     ],
+    'local' => [
+        'subtitle' => 'Locales en Marietta y Comunidades Cercanas',
+        'title' => 'Una Compañía Local de Pisos<br>Que Sirve Hogares con Cuidado',
+        'paragraph_1' => 'Bachmann Floors se enorgullece de servir a Marietta y la región cercana con servicios de pisos honestos y familiares. No buscamos parecer una gran compañía nacional. Somos locales, personales y comprometidos con hacer el trabajo correctamente.',
+        'paragraph_2' => 'Cuando usted nos invita a entrar a su hogar, entendemos la confianza que eso requiere. Por eso llegamos con respeto, comunicamos con claridad y tratamos cada proyecto como si estuviéramos trabajando para un vecino.',
+
+        'areas' => [
+            'Marietta',
+            'East Cobb',
+            'Kennesaw',
+            'Smyrna',
+            'Roswell',
+            'Woodstock',
+            'Condado de Cobb',
+            'Comunidades Cercanas de Georgia',
+        ],
+
+        'button' => 'Programar un Estimado Local',
+        'image_alt' => 'Bachmann Floors sirviendo hogares en Marietta y áreas cercanas',
+
+        'card_1_title' => 'Servicio Local',
+        'card_1_text' => 'Conocemos los hogares, vecindarios y familias del área de Marietta.',
+
+        'card_2_title' => 'Cuidado de Vecino',
+        'card_2_text' => 'Comunicación clara, trabajo respetuoso y pisos hechos para durar.',
+    ],
 ];

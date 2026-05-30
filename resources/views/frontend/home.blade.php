@@ -93,7 +93,76 @@
 
     {{-- ABOUT PARTIAL --}}
     @include('frontend.partials.about')
+    {{-- ===============================
+    LOCAL MARIETTA / FAMILY SERVICE AREA
+================================ --}}
+    <div class="local-home-section section-padding">
+        <div class="container">
 
+            <div class="row gy-5 align-items-center">
+
+                {{-- Left Content --}}
+                <div class="col-xl-6 col-lg-6">
+                    <div class="about-content-wrap local-home-content">
+
+                        <span class="section-subtitle">
+                            {{ __('home.local.subtitle') }}
+                        </span>
+
+                        <h2 class="visible-slowly-right">
+                            {!! __('home.local.title') !!}
+                        </h2>
+
+                        <p class="mt-4">
+                            {{ __('home.local.paragraph_1') }}
+                        </p>
+
+                        <p>
+                            {{ __('home.local.paragraph_2') }}
+                        </p>
+
+                        <div class="local-service-list mt-4">
+                            @foreach (__('home.local.areas') as $area)
+                                <span>{{ $area }}</span>
+                            @endforeach
+                        </div>
+
+                        <div class="mt-40">
+                            <a href="{{ url('contact') }}" class="theme-btn">
+                                {{ __('home.local.button') }}
+                                <i class="fa-light fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                {{-- Right Visual --}}
+                <div class="col-xl-6 col-lg-6">
+                    <div class="local-visual-wrap wow img-custom-anim-right" data-wow-delay=".3s">
+
+                        <div class="local-main-img">
+                            <img src="{{ asset('assets/frontend/img/about/car.jpg') }}"
+                                alt="{{ __('home.local.image_alt') }}">
+                        </div>
+
+                        <div class="local-floating-card local-card-one">
+                            <h5>{{ __('home.local.card_1_title') }}</h5>
+                            <p>{{ __('home.local.card_1_text') }}</p>
+                        </div>
+
+                        <div class="local-floating-card local-card-two">
+                            <h5>{{ __('home.local.card_2_title') }}</h5>
+                            <p>{{ __('home.local.card_2_text') }}</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 
     {{-- ===============================
         WHY CHOOSE US SECTION
@@ -661,6 +730,102 @@
         .home-final-cta p,
         .home-final-cta .section-subtitle {
             color: #fff;
+        }
+
+        .local-home-section {
+            background: #f7f3ee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .local-home-content p {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .local-service-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .local-service-list span {
+            display: inline-flex;
+            align-items: center;
+            padding: 9px 15px;
+            background: #fff;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+        }
+
+        .local-service-list span::before {
+            content: "•";
+            margin-right: 8px;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .local-visual-wrap {
+            position: relative;
+            padding: 30px;
+        }
+
+        .local-main-img img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 55px rgba(0, 0, 0, .14);
+        }
+
+        .local-floating-card {
+            position: absolute;
+            background: #fff;
+            padding: 22px 24px;
+            border-radius: 10px;
+            max-width: 260px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .13);
+        }
+
+        .local-floating-card h5 {
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .local-floating-card p {
+            margin-bottom: 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .local-card-one {
+            top: 5px;
+            left: 0;
+        }
+
+        .local-card-two {
+            right: 0;
+            bottom: 5px;
+        }
+
+        @media (max-width: 991px) {
+            .local-visual-wrap {
+                padding: 0;
+            }
+
+            .local-floating-card {
+                position: relative;
+                max-width: 100%;
+                margin-top: 18px;
+            }
+
+            .local-card-one,
+            .local-card-two {
+                top: auto;
+                left: auto;
+                right: auto;
+                bottom: auto;
+            }
         }
     </style>
 @endpush
