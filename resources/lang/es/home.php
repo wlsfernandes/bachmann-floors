@@ -39,24 +39,25 @@ return [
 
     'accordion_refinishing_title' => 'Restauración de Pisos',
 
-    'about_title' => '10 Décadas de Experiencia en Pisos de Calidad',
+    'about_title' => 'Más de una Década de Trabajo Honesto en Pisos de Madera',
 
-    'about_description' => 'Ofrecemos servicios profesionales de instalación de pisos, reparación, restauración, mantenimiento y diseño personalizado para hogares y empresas.',
+    'about_description' => 'Bachmann Floors es una pequeña compañía familiar de pisos que sirve a hogares y negocios con instalación cuidadosa, restauración, reparaciones y orientación confiable.',
 
     'about_button' => 'Sobre Nosotros',
 
-    'about_history_title' => 'Historia',
+    'about_history_title' => 'Nuestra Historia',
 
-    'about_history_text' => 'En Backmann Floors nos apasiona transformar espacios con soluciones de pisos de alta calidad que combinan estilo, durabilidad y funcionalidad. Con más de una década de experiencia, nuestro equipo se especializa en instalaciones de madera, laminado, vinilo y azulejo para propiedades residenciales y comerciales.',
+    'about_history_text' => 'En Bachmann Floors, creemos que los pisos hermosos comienzan con trabajo honesto, manos cuidadosas y respeto por cada hogar al que entramos. Lo que comenzó como una pasión por los pisos de madera se ha convertido en una compañía familiar construida sobre el buen oficio, la confianza y el servicio personal. Con más de una década de experiencia, ayudamos a propietarios y negocios a transformar sus espacios con pisos cálidos, duraderos y hechos para perdurar.',
 
-    'about_mission_title' => 'Misión',
+    'about_mission_title' => 'Nuestra Misión',
 
-    'about_mission_text' => 'Nuestra misión es ofrecer soluciones de pisos de alta calidad que combinen durabilidad, belleza y valor, superando las expectativas de nuestros clientes con instalaciones profesionales y diseños innovadores.',
+    'about_mission_text' => 'Nuestra misión es ofrecer servicios de pisos que combinen belleza, durabilidad y trabajo honesto. Nos enfocamos en materiales de calidad, preparación cuidadosa y servicio respetuoso para que cada cliente se sienta seguro desde la primera conversación hasta la revisión final.',
 
-    'about_vision_title' => 'Visión',
+    'about_vision_title' => 'Nuestra Visión',
 
-    'about_vision_text' => 'Nuestra visión es convertirnos en líderes confiables en soluciones de pisos, ofreciendo resultados duraderos, diseño innovador y relaciones sólidas con nuestros clientes.',
-    'process_title' => 'De la consulta a la perfección, siempre',
+    'about_vision_text' => 'Nuestra visión es ser una compañía local de pisos reconocida por hacer el trabajo correctamente. Queremos que cada proyecto refleje cuidado, integridad y valor duradero, mientras construimos relaciones con familias y clientes por muchos años.',
+
+    'process_title' => 'Un Proceso Simple Basado en Confianza y Cuidado',
 
     'process_description' => 'Nuestro proceso de instalación de pisos garantiza calidad desde la consulta hasta la instalación, asegurando satisfacción en cada paso.',
 
@@ -380,39 +381,40 @@ return [
         ],
     ],
     'projects_2' => [
-        'subtitle' => 'Real Homes. Real Work.',
-        'title' => 'Simple, Beautiful Flooring Work for Families Like Yours',
-        'text' => 'Every home has its own story. Our work is to help make that story warmer, cleaner, and more beautiful with floors installed and restored with care.',
-        'button' => 'View Our Work',
+        'subtitle' => 'Hogares Reales. Trabajo Real.',
+        'title' => 'Pisos Simples y Hermosos para Familias Como la Suya',
+        'text' => 'Cada hogar tiene su propia historia. Nuestro trabajo es ayudar a que esa historia se sienta más cálida, limpia y hermosa con pisos instalados y restaurados con cuidado.',
+        'button' => 'Ver Nuestro Trabajo',
 
         'items' => [
             [
                 'image' => '1.jpg',
-                'label' => 'Hardwood Beauty',
-                'title' => 'Warm Living Spaces',
+                'label' => 'Belleza en Madera',
+                'title' => 'Espacios Cálidos para Vivir',
             ],
             [
                 'image' => '2.jpg',
-                'label' => 'Home Renewal',
-                'title' => 'Fresh Floors for Everyday Life',
+                'label' => 'Renovación del Hogar',
+                'title' => 'Pisos Nuevos para la Vida Diaria',
             ],
             [
                 'image' => '3.jpg',
-                'label' => 'Family Friendly',
-                'title' => 'Floors Made for Real Homes',
+                'label' => 'Para Toda la Familia',
+                'title' => 'Pisos Hechos para Hogares Reales',
             ],
             [
                 'image' => '4.jpg',
-                'label' => 'Clean Finish',
-                'title' => 'Simple Details, Beautiful Results',
+                'label' => 'Acabado Limpio',
+                'title' => 'Detalles Simples, Resultados Hermosos',
             ],
             [
                 'image' => '5.jpg',
-                'label' => 'Restored Character',
-                'title' => 'Bringing Wood Floors Back to Life',
+                'label' => 'Carácter Restaurado',
+                'title' => 'Dando Nueva Vida a Pisos de Madera',
             ],
         ],
     ],
+
     'local' => [
         'subtitle' => 'Locales en Marietta y Comunidades Cercanas',
         'title' => 'Una Compañía Local de Pisos<br>Que Sirve Hogares con Cuidado',
@@ -438,5 +440,27 @@ return [
 
         'card_2_title' => 'Cuidado de Vecino',
         'card_2_text' => 'Comunicación clara, trabajo respetuoso y pisos hechos para durar.',
+    ],
+    'about' => [
+        'subtitle' => 'Sobre Bachmann Floors',
+        'title' => 'Una Compañía Familiar de Pisos Construida Sobre Confianza',
+        'description' => 'Ayudamos a familias y negocios locales a crear pisos hermosos y duraderos por medio de orientación honesta, trabajo cuidadoso y servicio respetuoso.',
+        'button' => 'Sobre Nosotros',
+        'image_alt' => 'Trabajo familiar de pisos de madera de Bachmann Floors',
+
+        'accordion' => [
+            [
+                'title' => 'Nuestra Historia',
+                'text' => 'Bachmann Floors nació con una idea sencilla: el buen trabajo debe hacerse con honestidad, cuidado y respeto por el hogar. Lo que comenzó como una pasión por los pisos de madera se ha convertido en una pequeña compañía familiar en la que confían propietarios que buscan calidad sin presión ni confusión.',
+            ],
+            [
+                'title' => 'Nuestra Misión',
+                'text' => 'Nuestra misión es ayudar a cada cliente a sentirse seguro desde la primera conversación hasta la revisión final. Usamos materiales de calidad, preparación cuidadosa y manos expertas para crear pisos hermosos, duraderos y listos para la vida real de una familia.',
+            ],
+            [
+                'title' => 'Nuestra Promesa',
+                'text' => 'Tratamos su hogar como algo importante, porque lo es. Comunicamos con claridad, trabajamos con respeto y nos enfocamos en hacer el trabajo bien, no en apresurarlo. Nuestro objetivo no es solamente terminar un proyecto, sino ganar su confianza por muchos años.',
+            ],
+        ],
     ],
 ];

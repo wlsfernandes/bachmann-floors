@@ -31,24 +31,25 @@ return [
 
     'accordion_refinishing_title' => 'Floor Refinishing',
 
-    'about_title' => '10 Decades of Expertise in Quality Flooring',
+    'about_title' => 'Over a Decade of Honest Craftsmanship in Hardwood Flooring',
 
-    'about_description' => 'We provide professional flooring installation, repair, refinishing, maintenance, and custom design services for homes and businesses.',
+    'about_description' => 'Bachmann Floors is a small, family-owned flooring company serving homes and businesses with careful installation, refinishing, repairs, and trusted guidance.',
 
     'about_button' => 'About Us',
 
-    'about_history_title' => 'History',
+    'about_history_title' => 'Our Story',
 
-    'about_history_text' => 'At Backmann Floors, we are passionate about transforming spaces with high-quality flooring solutions that blend style, durability, and functionality. With over a decade of experience, our team specializes in hardwood, laminate, vinyl, and tile installations for residential and commercial properties. We focus on quality craftsmanship, excellent materials, and complete customer satisfaction.',
+    'about_history_text' => 'At Bachmann Floors, we believe beautiful floors begin with honest work, careful hands, and respect for every home we enter. What started as a passion for hardwood flooring has grown into a family-owned company built on craftsmanship, trust, and personal service. With over a decade of experience, we help homeowners and businesses transform their spaces with floors that are warm, durable, and made to last.',
 
-    'about_mission_title' => 'Mission',
+    'about_mission_title' => 'Our Mission',
 
-    'about_mission_text' => 'Our mission is to deliver high-quality flooring solutions that combine durability, beauty, and value. We strive to exceed customer expectations by providing professional installation, reliable service, and innovative flooring designs that enhance homes and businesses.',
+    'about_mission_text' => 'Our mission is to provide flooring services that combine beauty, durability, and honest craftsmanship. We focus on quality materials, careful preparation, and respectful service so every customer feels confident from the first conversation to the final walkthrough.',
 
-    'about_vision_title' => 'Vision',
+    'about_vision_title' => 'Our Vision',
 
-    'about_vision_text' => 'Our vision is to become a trusted leader in flooring solutions by delivering exceptional craftsmanship, innovative design, and long-lasting results. We aim to transform spaces while building lasting relationships with our customers.',
-    'process_title' => 'From consultation to perfection, every time',
+    'about_vision_text' => 'Our vision is to be a trusted local flooring company known for doing the work the right way. We want every project to reflect care, integrity, and long-lasting value while building relationships with families and customers for years to come.',
+
+    'process_title' => 'A Simple Process Built on Trust and Care',
 
     'process_description' => 'Our seamless flooring process ensures quality from consultation to installation, guaranteeing satisfaction every step of the way.',
 
@@ -434,5 +435,27 @@ return [
 
         'card_2_title' => 'Neighborly Care',
         'card_2_text' => 'Clear communication, respectful work, and floors made to last.',
+    ],
+    'about' => [
+        'subtitle' => 'About Bachmann Floors',
+        'title' => 'A Family-Owned Flooring Company Built on Trust',
+        'description' => 'We help families and local businesses create beautiful, lasting floors through honest guidance, careful craftsmanship, and respectful service.',
+        'button' => 'About Us',
+        'image_alt' => 'Bachmann Floors family-owned hardwood flooring work',
+
+        'accordion' => [
+            [
+                'title' => 'Our Story',
+                'text' => 'Bachmann Floors began with a simple belief: good work should be done with honesty, care, and respect for the home. What started as a passion for hardwood flooring has grown into a small family-owned company trusted by homeowners who want quality without pressure or confusion.',
+            ],
+            [
+                'title' => 'Our Mission',
+                'text' => 'Our mission is to help every customer feel confident from the first conversation to the final walkthrough. We use quality materials, careful preparation, and skilled hands to create floors that are beautiful, durable, and ready for real family life.',
+            ],
+            [
+                'title' => 'Our Promise',
+                'text' => 'We treat your home like it matters because it does. We communicate clearly, work respectfully, and focus on doing the job right—not rushing through it. Our goal is not only to finish a project, but to earn your trust for years to come.',
+            ],
+        ],
     ],
 ];

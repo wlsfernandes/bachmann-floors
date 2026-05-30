@@ -827,5 +827,17 @@
                 bottom: auto;
             }
         }
+
+        .family-about-accordion .accordion-body {
+            line-height: 1.8;
+        }
+
+        #about-1 .section-title h6 {
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+            font-weight: 700;
+            opacity: .75;
+            margin-bottom: 12px;
+        }
     </style>
 @endpush
