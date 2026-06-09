@@ -9,16 +9,16 @@ return [
 
     // Service Cards
     'service_1_tag' => 'Hardwood Experts',
-    'service_1_title' => 'Hardwood <br> Installation',
+    'service_1_title' => 'Stair case <br> and handrails',
 
     'service_2_tag' => 'Modern Surfaces',
-    'service_2_title' => 'Tile & Vinyl <br> Installation',
+    'service_2_title' => 'Hardwood <br> Installation',
 
     'service_3_tag' => 'Restoration',
-    'service_3_title' => 'Floor <br> Repair',
+    'service_3_title' => 'Repairs',
 
     'service_4_tag' => 'Refinishing',
-    'service_4_title' => 'Floor <br> Refinishing',
+    'service_4_title' => 'Sand <br> and finish',
 
     // Accordion
     'accordion_1_title' => 'Flooring Installation',

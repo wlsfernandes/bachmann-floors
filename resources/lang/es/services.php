@@ -10,16 +10,16 @@ return [
 
     // Service Cards
     'service_1_tag' => 'Expertos en Madera',
-    'service_1_title' => 'Instalación de <br> Madera',
+    'service_1_title' => 'Escaleras y Pasamanos',
 
     'service_2_tag' => 'Superficies Modernas',
-    'service_2_title' => 'Instalación de <br> Loseta y Vinilo',
+    'service_2_title' => 'Instalación de <br> Madera',
 
     'service_3_tag' => 'Restauración',
-    'service_3_title' => 'Reparación de <br> Pisos',
+    'service_3_title' => 'Reparaciones',
 
     'service_4_tag' => 'Renovación',
-    'service_4_title' => 'Restauración de <br> Pisos',
+    'service_4_title' => 'Lijado y Acabado',
 
     // Accordion
     'accordion_1_title' => 'Instalación de Pisos',

@@ -29,7 +29,7 @@
                     <img src="assets/frontend/img/service/1.jpg" alt="">
                     <div class="service-info-wrap">
                         <div class="service-info-inner">
-                            <span>@lang('services.service_1_tag')</span>
+                            {{-- <span>@lang('services.service_1_tag')</span> --}}
                             <h5>@lang('services.service_1_title')</h5>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                     <img src="assets/frontend/img/service/2.jpg" alt="">
                     <div class="service-info-wrap">
                         <div class="service-info-inner">
-                            <span>@lang('services.service_2_tag')</span>
+                            {{-- <span>@lang('services.service_2_tag')</span> --}}
                             <h5>@lang('services.service_2_title')</h5>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                     <img src="assets/frontend/img/service/3.jpg" alt="">
                     <div class="service-info-wrap">
                         <div class="service-info-inner">
-                            <span>@lang('services.service_3_tag')</span>
+                            {{-- <span>@lang('services.service_3_tag')</span> --}}
                             <h5>@lang('services.service_3_title')</h5>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                     <img src="assets/frontend/img/service/4.jpg" alt="">
                     <div class="service-info-wrap">
                         <div class="service-info-inner">
-                            <span>@lang('services.service_4_tag')</span>
+                            {{-- <span>@lang('services.service_4_tag')</span> --}}
                             <h5>@lang('services.service_4_title')</h5>
                         </div>
                     </div>

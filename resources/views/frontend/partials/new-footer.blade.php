@@ -45,6 +45,21 @@
                         </p>
                     </div>
 
+                    <!-- Social Media -->
+                    <div class="single-contact-info wow fadeInUp animated" data-wow-delay="800ms">
+                        <div class="footer-social mt-15">
+                            <a href="https://www.facebook.com/profile.php?id=61587818097006" target="_blank"
+                                rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/bachmann_floors/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 

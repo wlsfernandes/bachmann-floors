@@ -128,3 +128,36 @@ Header tools (flags + admin icon)
     object-fit: cover; /* no stretching */
     object-position: top;
 }
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-social a {
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: #fff;
+    color: #111;
+}
+
+.logo img {
+    height: 90px;
+    width: auto;
+}
+@media (max-width: 768px) {
+    .logo img {
+        height: 60px;
+        width: auto;
+    }
+}

@@ -166,7 +166,7 @@
 
     {{-- ===============================
         WHY CHOOSE US SECTION
-    ================================ --}}
+    ================================ 
     <div class="why-section section-padding pt-0">
         <div class="container">
 
@@ -211,10 +211,10 @@
         </div>
     </div>
 
-
+    --}}
     {{-- ===============================
         GALLERY SECTION
-    ================================ --}}
+    ================================ 
     <div class="gallery-section gray-bg section-padding">
         <div class="container">
 
@@ -255,11 +255,11 @@
 
         </div>
     </div>
+    --}}
 
-
-    {{-- PROJECTS PARTIAL --}}
+    {{-- PROJECTS PARTIAL 
     @include('frontend.partials.projects')
-
+    --}}
 
     {{-- ===============================
         PROCESS SECTION
@@ -329,7 +329,7 @@
 
     {{-- ===============================
         FAMILY-OWNED PROMISE SECTION
-    ================================ --}}
+    ================================ 
     <div class="family-promise-section section-padding">
         <div class="container">
             <div class="row gy-5 align-items-center">
@@ -383,7 +383,7 @@
         </div>
     </div>
 
-
+    --}}
     {{-- ===============================
         TESTIMONIAL SECTION
     ================================ --}}
@@ -500,7 +500,7 @@
 
     {{-- ===============================
         BLOG / EDUCATION SECTION
-    ================================ --}}
+    ================================ 
     <div id="blog-1" class="blog-section section-padding pt-0 pb-90">
         <div class="container">
 
@@ -563,7 +563,7 @@
         </div>
     </div>
 
-
+    --}}
     {{-- ===============================
         FINAL CTA
     ================================ --}}

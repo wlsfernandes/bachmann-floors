@@ -445,16 +445,12 @@ return [
 
         'accordion' => [
             [
-                'title' => 'Our Story',
-                'text' => 'Bachmann Floors began with a simple belief: good work should be done with honesty, care, and respect for the home. What started as a passion for hardwood flooring has grown into a small family-owned company trusted by homeowners who want quality without pressure or confusion.',
+                'title' => 'About Us',
+                'text' => 'We are focused on giving the best customer experience, not rushing things, and using high-quality supplies and skilled professionals to make your floors look great and last longer. This way we will have not only a client, but a true relationship trusting we are going to do floors at your kids\' home in the future.',
             ],
             [
-                'title' => 'Our Mission',
-                'text' => 'Our mission is to help every customer feel confident from the first conversation to the final walkthrough. We use quality materials, careful preparation, and skilled hands to create floors that are beautiful, durable, and ready for real family life.',
-            ],
-            [
-                'title' => 'Our Promise',
-                'text' => 'We treat your home like it matters because it does. We communicate clearly, work respectfully, and focus on doing the job right—not rushing through it. Our goal is not only to finish a project, but to earn your trust for years to come.',
+                'title' => 'About the Owner',
+                'text' => 'Bachmann Floors was created by Carlos Bachmann. Carlos is from the south of Brazil (he knows nothing about soccer), he came to improve his English. The "experience" ended up on creating his own hardwood flooring company in 2018, and improving some Spanish too... Other than working with hardwood floors, he loves spending time with his wife and 2 kids, playing drums at church, watching fights and looking at classic cars (sometimes buying if his wife approves).',
             ],
         ],
     ],

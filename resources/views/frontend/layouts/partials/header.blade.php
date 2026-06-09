@@ -28,8 +28,9 @@
 
                     <!-- Logo -->
                     <div class="logo">
-                        <a class="navbar-brand" href="{{ url('/') }}">
-                            <img src="{{ asset('assets/frontend/img/logo/bachmannfloors.webp') }}" alt="logo">
+                        <a class="navbar-brand" href="{{ url('/') }}" aria-label="Bachmann Floors Home">
+                            <img src="{{ asset('assets/frontend/img/logo/bachmannfloors.webp') }}"
+                                alt="Bachmann Floors Logo" class="img-fluid">
                         </a>
                     </div>
 

@@ -450,16 +450,12 @@ return [
 
         'accordion' => [
             [
-                'title' => 'Nuestra Historia',
-                'text' => 'Bachmann Floors nació con una idea sencilla: el buen trabajo debe hacerse con honestidad, cuidado y respeto por el hogar. Lo que comenzó como una pasión por los pisos de madera se ha convertido en una pequeña compañía familiar en la que confían propietarios que buscan calidad sin presión ni confusión.',
+                'title' => 'Sobre Nosotros',
+                'text' => 'Nos enfocamos en brindar la mejor experiencia al cliente, sin apresurarnos, y utilizando suministros de alta calidad y profesionales capacitados para que sus pisos se vean geniales y duren más. De esta manera, no solo tendremos un cliente, sino una verdadera relación de confianza para futuros proyectos en el hogar de sus hijos.',
             ],
             [
-                'title' => 'Nuestra Misión',
-                'text' => 'Nuestra misión es ayudar a cada cliente a sentirse seguro desde la primera conversación hasta la revisión final. Usamos materiales de calidad, preparación cuidadosa y manos expertas para crear pisos hermosos, duraderos y listos para la vida real de una familia.',
-            ],
-            [
-                'title' => 'Nuestra Promesa',
-                'text' => 'Tratamos su hogar como algo importante, porque lo es. Comunicamos con claridad, trabajamos con respeto y nos enfocamos en hacer el trabajo bien, no en apresurarlo. Nuestro objetivo no es solamente terminar un proyecto, sino ganar su confianza por muchos años.',
+                'title' => 'Sobre el Propietario',
+                'text' => 'Bachmann Floors fue creada por Carlos Bachmann. Carlos es del sur de Brasil (no sabe nada de fútbol), vino a mejorar su inglés. La "experiencia" terminó en la creación de su propia compañía de pisos de madera en 2018, y también mejorando un poco de español... Además de trabajar con pisos de madera, le encanta pasar tiempo con su esposa y sus 2 hijos, tocar la batería en la iglesia, ver peleas y mirar autos clásicos (a veces comprando si su esposa lo aprueba).',
             ],
         ],
     ],
